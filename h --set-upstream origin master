@@ -1,354 +1,0 @@
-[1mdiff --git a/README.md b/README.md[m
-[1mindex 73e8382..c68b63b 100644[m
-[1m--- a/README.md[m
-[1m+++ b/README.md[m
-[36m@@ -1,16 +1,17 @@[m
- # Volders Frontend Challenge [m
- [m
-[31m-This repoitory contains the code files of the challenge.[m
-[31m-[m
- ## Getting Started[m
- [m
-[31m-There are only html, css, and javascript which can be run on any server like apache. [m
-[32m+[m[32mThis project contains html, css, and javascript files.[m[41m [m
-[32m+[m
-[32m+[m[32mJust clone this repo access index.html through the browser.[m
- [m
-[31m-Just clone this repo to your server directory and then access it through browser.[m
-[32m+[m[32m## Pages[m
- [m
-[31m-## Validation Assumption[m
-[32m+[m[32mProject has a Responsive Signup Page containing name and address fields.[m
- [m
-[31m-From the image provided I assumed to validate fields of name only. Both the fields are required and must contain at least two characters.[m
-[32m+[m[32mSignup page has 3 cases i.e. Empty, Error and Filled.[m
- [m
-[31m-This view contains validations and also is responsive.[m
-[32m+[m[32m## Validation[m
- [m
-[32m+[m[32mValidation is applied on First Name and Last Name.[m
-\ No newline at end of file[m
-[1mdiff --git a/css/style.css b/css/style.css[m
-[1mindex d814531..78f48d8 100755[m
-[1m--- a/css/style.css[m
-[1m+++ b/css/style.css[m
-[36m@@ -1,78 +1,77 @@[m
- body {[m
-[31m-	margin:  0;[m
-[32m+[m[32m    margin: 0;[m[41m[m
- }[m
-[32m+[m[41m[m
- .page-content {[m
-[31m-	width: 100%;[m
-[31m-	margin:  0 auto;[m
-[31m-	display: flex;[m
-[31m-	display: -webkit-flex;[m
-[31m-	justify-content: center;[m
-[31m-	-o-justify-content: center;[m
-[31m-	-ms-justify-content: center;[m
-[31m-	-moz-justify-content: center;[m
-[31m-	-webkit-justify-content: center;[m
-[31m-	align-items: center;[m
-[31m-	-o-align-items: center;[m
-[31m-	-ms-align-items: center;[m
-[31m-	-moz-align-items: center;[m
-[31m-	-webkit-align-items: center;[m
-[32m+[m[32m    width: 100%;[m[41m[m
-[32m+[m[32m    margin: 0 auto;[m[41m[m
-[32m+[m[32m    display: flex;[m[41m[m
-[32m+[m[32m    display: -webkit-flex;[m[41m[m
-[32m+[m[32m    justify-content: center;[m[41m[m
-[32m+[m[32m    -o-justify-content: center;[m[41m[m
-[32m+[m[32m    -ms-justify-content: center;[m[41m[m
-[32m+[m[32m    -moz-justify-content: center;[m[41m[m
-[32m+[m[32m    -webkit-justify-content: center;[m[41m[m
-[32m+[m[32m    align-items: center;[m[41m[m
-[32m+[m[32m    -o-align-items: center;[m[41m[m
-[32m+[m[32m    -ms-align-items: center;[m[41m[m
-[32m+[m[32m    -moz-align-items: center;[m[41m[m
-[32m+[m[32m    -webkit-align-items: center;[m[41m[m
-     background: rgb(240, 247, 254);[m
- }[m
-[32m+[m[41m[m
- .logo {[m
-[31m-	position: absolute;[m
-[32m+[m[32m    position: absolute;[m[41m[m
-     top: 30px;[m
-     left: 30px;[m
- }[m
-[31m-.form-v1-content   {[m
-[31m-	background: #fff;[m
-[31m-	width: 600px;[m
-[31m-	box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);[m
-[31m-	-o-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);[m
-[31m-	-ms-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);[m
-[31m-	-moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);[m
-[31m-	-webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);[m
-[31m-	border-radius: 10px;[m
-[31m-	-o-border-radius: 10px;[m
-[31m-	-ms-border-radius: 10px;[m
-[31m-	-moz-border-radius: 10px;[m
-[31m-	-webkit-border-radius: 10px;[m
-[31m-	margin: 145px 0;[m
-[31m-	font-family: 'Open Sans', sans-serif;[m
-[31m-	position: relative;[m
-[31m-	display: flex;[m
-[31m-	display: -webkit-flex;[m
-[32m+[m[41m[m
-[32m+[m[32m.form-v1-content {[m[41m[m
-[32m+[m[32m    background: #fff;[m[41m[m
-[32m+[m[32m    width: 600px;[m[41m[m
-[32m+[m[32m    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);[m[41m[m
-[32m+[m[32m    -o-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);[m[41m[m
-[32m+[m[32m    -ms-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);[m[41m[m
-[32m+[m[32m    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);[m[41m[m
-[32m+[m[32m    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);[m[41m[m
-[32m+[m[32m    border-radius: 10px;[m[41m[m
-[32m+[m[32m    -o-border-radius: 10px;[m[41m[m
-[32m+[m[32m    -ms-border-radius: 10px;[m[41m[m
-[32m+[m[32m    -moz-border-radius: 10px;[m[41m[m
-[32m+[m[32m    -webkit-border-radius: 10px;[m[41m[m
-[32m+[m[32m    margin: 145px 0;[m[41m[m
-[32m+[m[32m    font-family: 'Open Sans', sans-serif;[m[41m[m
-[32m+[m[32m    position: relative;[m[41m[m
-[32m+[m[32m    display: flex;[m[41m[m
-[32m+[m[32m    display: -webkit-flex;[m[41m[m
- }[m
- [m
- .form-v1-content .wizard-form {[m
-[31m-	width: 100%;[m
-[32m+[m[32m    width: 100%;[m[41m[m
- }[m
-[32m+[m[41m[m
- .top-bar {[m
-[31m-	height: 75px;[m
-[31m-	background:#f9f9f9;[m
-[31m-	padding-left: 30px;[m
-[31m-	padding-right: 30px;[m
-[31m-	padding-top: 30px;[m
-[32m+[m[32m    height: 75px;[m[41m[m
-[32m+[m[32m    background: #f9f9f9;[m[41m[m
-[32m+[m[32m    padding-left: 30px;[m[41m[m
-[32m+[m[32m    padding-right: 30px;[m[41m[m
-[32m+[m[32m    padding-top: 30px;[m[41m[m
- }[m
-[32m+[m[41m[m
- .bottom-bar {[m
-     height: 75px;[m
-     background: #f9f9f9;[m
-     padding-top: 18px;[m
- }[m
-[31m-.inner .form-row-total {[m
-[31m-	box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);[m
-[31m-	-o-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);[m
-[31m-	-ms-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);[m
-[31m-	-moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);[m
-[31m-	-webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);[m
-[31m-    margin-bottom: 40px;[m
-[31m-    margin-top: 10px;[m
-[31m-}[m
-[32m+[m[41m[m
- .form-section {[m
-[31m-	padding: 30px;[m
-[32m+[m[32m    padding: 30px;[m[41m[m
- }[m
-[32m+[m[41m[m
- .progress {[m
-[31m-	height: 0.5rem!important;[m
-[32m+[m[32m    height: 0.5rem !important;[m[41m[m
- }[m
-[32m+[m[41m[m
- .progress-bar {[m
-     display: -ms-flexbox;[m
-     display: flex;[m
-[36m@@ -84,105 +83,96 @@[m [mbody {[m
-     text-align: center;[m
-     white-space: nowrap;[m
-     background-color: #1e4798;[m
-[31m-	transition: width .6s ease;[m
-[31m-	[m
-[32m+[m[32m    transition: width .6s ease;[m[41m[m
-[32m+[m[41m[m
- }[m
-[32m+[m[41m[m
- .bold {[m
-[31m-	color: #1e4798;[m
-[32m+[m[32m    color: #1e4798;[m[41m[m
-     font-weight: bold;[m
- }[m
-[31m-.inner .form-row {[m
-[31m-    display: flex;[m
-[31m-    margin: 0 -10px;[m
-[31m-	position: relative;[m
-[31m-}[m
-[31m-.inner .form-row .form-holder {[m
-[31m-    width: 50%;[m
-[31m-    padding: 0 10px;[m
-[31m-    margin-bottom: 17px;[m
-[31m-    position: relative;[m
-[31m-}[m
-[32m+[m[41m[m
- .heading {[m
-[31m-	color: #1e4798;[m
-[31m-	font-weight: bold;[m
-[32m+[m[32m    color: #1e4798;[m[41m[m
-[32m+[m[32m    font-weight: bold;[m[41m[m
- }[m
-[32m+[m[41m[m
- .btn-success {[m
-     color: #fff;[m
-     background-color: #51c98b;[m
-     border-color: #51c98b;[m
-[31m-	font-weight: bold;[m
-[31m-	border-radius: 0px!important;[m
-[32m+[m[32m    font-weight: bold;[m[41m[m
-[32m+[m[32m    border-radius: 0px !important;[m[41m[m
-[32m+[m[32m}[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32mlabel .error {[m[41m[m
-[32m+[m[32m    display: inline;[m[41m[m
- }[m
- [m
- /* Responsive */[m
- @media screen and (max-width: 1199px) {[m
-[31m-	.form-v1-content {[m
-[31m-		margin: 180px 20px;[m
-[31m-	}[m
-[32m+[m[32m    .form-v1-content {[m[41m[m
-[32m+[m[32m        margin: 180px 20px;[m[41m[m
-[32m+[m[32m    }[m[41m[m
- }[m
-[32m+[m[41m[m
- @media screen and (max-width: 991px) {[m
-[31m-	.form-register .vertical {[m
-[31m-		background: #fff;[m
-[31m-	}[m
-[31m-	[m
-[31m-	.form-register .content,[m
-[31m-	.inner .form-row-total {[m
-[31m-		box-shadow: none;[m
-[31m-		-o-box-shadow: none;[m
-[31m-		-ms-box-shadow: none;[m
-[31m-		-moz-box-shadow: none;[m
-[31m-		-webkit-box-shadow: none;[m
-[31m-	}[m
-[32m+[m[32m    .form-register .vertical {[m[41m[m
-[32m+[m[32m        background: #fff;[m[41m[m
-[32m+[m[32m    }[m[41m[m
- }[m
-[32m+[m[41m[m
- @media screen and (max-width: 860px) {[m
-[31m-	.logo {[m
-[31m-		position: absolute;[m
-[31m-		top: 30px;[m
-[31m-		left: unset;[m
-[31m-	}[m
-[31m-	.col-xs-1 {[m
-[31m-		width: 10%;[m
-[31m-	}[m
-[31m-	.col-xs-11 {[m
-[31m-		max-width: 90%;[m
-[31m-	}[m
-[32m+[m[32m    .logo {[m[41m[m
-[32m+[m[32m        position: absolute;[m[41m[m
-[32m+[m[32m        top: 30px;[m[41m[m
-[32m+[m[32m        left: unset;[m[41m[m
-[32m+[m[32m    }[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    .col-xs-1 {[m[41m[m
-[32m+[m[32m        width: 10%;[m[41m[m
-[32m+[m[32m    }[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    .col-xs-11 {[m[41m[m
-[32m+[m[32m        max-width: 90%;[m[41m[m
-[32m+[m[32m    }[m[41m[m
- }[m
-[32m+[m[41m[m
- @media screen and (max-width: 575px) {[m
-[31m-	.form-register .content .inner {[m
-[31m-	    padding: 0 30px;[m
-[31m-	}[m
-[31m-	.form-register .content .wizard-header,[m
-[31m-	.form-register .content #form-total-p-2 .wizard-header {[m
-[31m-	    padding: 37px 0px 13px;[m
-[31m-	}[m
-[31m-	.inner .form-row {[m
-[31m-		flex-direction: column;[m
-[31m-		-o-flex-direction: column;[m
-[31m-		-ms-flex-direction: column;[m
-[31m-		-moz-flex-direction: column;[m
-[31m-		-webkit-flex-direction: column;[m
-[31m-		margin: 0;[m
-[31m-	}[m
-[31m-	.col-xs-1 {[m
-[31m-		width: 10%;[m
-[31m-	}[m
-[31m-	.col-xs-11 {[m
-[31m-		max-width: 90%;[m
-[31m-	}[m
-[32m+[m[32m    .form-register .content .inner {[m[41m[m
-[32m+[m[32m        padding: 0 30px;[m[41m[m
-[32m+[m[32m    }[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    .form-register .content .wizard-header,[m[41m[m
-[32m+[m[32m    .form-register .content #form-total-p-2 .wizard-header {[m[41m[m
-[32m+[m[32m        padding: 37px 0px 13px;[m[41m[m
-[32m+[m[32m    }[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    .col-xs-1 {[m[41m[m
-[32m+[m[32m        width: 10%;[m[41m[m
-[32m+[m[32m    }[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    .col-xs-11 {[m[41m[m
-[32m+[m[32m        max-width: 90%;[m[41m[m
-[32m+[m[32m    }[m[41m[m
- }[m
-[32m+[m[41m[m
- @media screen and (max-width: 445px) {[m
-[31m-	.col-xs-1 {[m
-[31m-		width: 13%;[m
-[31m-	}[m
-[31m-	.col-xs-11 {[m
-[31m-		max-width: 87%;[m
-[31m-	}[m
-[32m+[m[32m    .col-xs-1 {[m[41m[m
-[32m+[m[32m        width: 13%;[m[41m[m
-[32m+[m[32m    }[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    .col-xs-11 {[m[41m[m
-[32m+[m[32m        max-width: 87%;[m[41m[m
-[32m+[m[32m    }[m[41m[m
- }[m
-[32m+[m[41m[m
- @media screen and (max-width: 356px) {[m
-[31m-	.col-xs-1 {[m
-[31m-		width: 20%;[m
-[31m-	}[m
-[31m-	.col-xs-11 {[m
-[31m-		max-width: 80%;[m
-[31m-	}[m
-[32m+[m[32m    .col-xs-1 {[m[41m[m
-[32m+[m[32m        width: 20%;[m[41m[m
-[32m+[m[32m    }[m[41m[m
-[32m+[m[41m[m
-[32m+[m[32m    .col-xs-11 {[m[41m[m
-[32m+[m[32m        max-width: 80%;[m[41m[m
-[32m+[m[32m    }[m[41m[m
- }[m
-\ No newline at end of file[m
-[1mdiff --git a/index.html b/index.html[m
-[1mindex 37dad2d..b83d0ae 100755[m
-[1m--- a/index.html[m
-[1m+++ b/index.html[m
-[36m@@ -1,121 +1,114 @@[m
- <!DOCTYPE html>[m
- <html>[m
-[31m-[m
- <head>[m
-[31m-	<meta charset="utf-8">[m
-[31m-	<title>Volders</title>[m
-[31m-	<!-- Mobile Specific Metas -->[m
-[31m-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">[m
-[31m-	<!-- Font-->[m
-[31m-	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">[m
-[31m-	<link rel="stylesheet" type="text/css"
