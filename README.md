@@ -1,16 +1,17 @@
 # Volders Frontend Challenge 
 
-This repoitory contains the code files of the challenge.
-
 ## Getting Started
 
-There are only html, css, and javascript which can be run on any server like apache. 
+This project contains html, css, and javascript files. 
 
-Just clone this repo to your server directory and then access it through browser.
+Just clone this repo access index.html through the browser.
 
-## Validation Assumption
+## Pages
 
-From the image provided I assumed to validate fields of name only. Both the fields are required and must contain at least two characters.
+Project has a Responsive Signup Page containing name and address fields.
 
-This view contains validations and also is responsive.
+Signup page has 3 cases i.e. Empty, Error and Filled.
 
+## Validation
+
+Validation is applied on First Name and Last Name.
